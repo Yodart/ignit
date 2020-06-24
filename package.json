@@ -1,0 +1,54 @@
+{
+  "name": "ignit",
+  "description": "Create flutter projects with batteries included.",
+  "version": "1.1.0",
+  "author": "Yodart @Yodart",
+  "bin": {
+    "ignit": "./bin/run"
+  },
+  "bugs": "https://github.com/Yodart/ignit/issues",
+  "dependencies": {
+    "@oclif/command": "^1.6.1",
+    "@oclif/config": "^1.15.1",
+    "@oclif/plugin-help": "^3.1.0",
+    "cli-ux": "^5.4.6",
+    "execa": "^4.0.2",
+    "garson": "^0.2.2",
+    "inquirer-fuzzy-path": "^2.3.0",
+    "listr": "^0.14.3",
+    "node-notifier": "^7.0.1",
+    "rxjs": "^6.5.5"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/test": "^1.2.6",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/Yodart/ignit",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "ignit"
+  },
+  "repository": "Yodart/ignit",
+  "scripts": {
+    "posttest": "eslint .",
+    "prepack": "oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
