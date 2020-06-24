@@ -263,4 +263,4 @@ flutter:
   }
 }
 
-module.exports = ignit;
+module.exports = Ignit;
