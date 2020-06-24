@@ -1,4 +1,4 @@
-# ignit
+# ignit 🔥
 
 Create flutter projects with batteries included.
 
