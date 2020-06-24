@@ -21,7 +21,7 @@ $ npm install -g ignit
 $ ignit COMMAND
 running command...
 $ ignit (-v|--version|version)
-ignit/1.1.0 darwin-x64 node-v12.16.0
+ignit/1.1.1 darwin-x64 node-v12.16.0
 $ ignit --help [COMMAND]
 USAGE
   $ ignit COMMAND
