@@ -1,8 +1,8 @@
 {
-  "name": "ignit",
-  "description": "Create flutter projects with batteries included.",
-  "version": "1.1.0",
-  "author": "Yodart @Yodart",
+  "name": "@Yodart/ignit",
+  "description": "Supercharge the build of @flutter apps. Set your cache arch, state management, app icon and more right from step one.",
+  "version": "1.1.1",
+  "author": "@Yodart",
   "bin": {
     "ignit": "./bin/run"
   },
@@ -44,7 +44,7 @@
   "oclif": {
     "bin": "ignit"
   },
-  "repository": "Yodart/ignit",
+  "repository": "https://github.com/Yodart/ignit",
   "scripts": {
     "posttest": "eslint .",
     "prepack": "oclif-dev readme",

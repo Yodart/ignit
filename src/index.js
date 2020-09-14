@@ -89,30 +89,30 @@ class Ignit extends Command {
         depthLimit: 5,
       },
     ]);
-    // const androidFirebaseFile = await inquirer.prompt([
-    //   {
-    //     type: "fuzzypath",
-    //     name: "android-path",
-    //     itemType: "file",
-    //     rootPath: `/Users/${require("os").userInfo().username}/Downloads/`,
-    //     message: "[Android 🤖] google-services.json file path: ",
-    //     default: `/Users/${require("os").userInfo().username}/Downloads/`,
-    //     suggestOnly: false,
-    //     depthLimit: 5,
-    //   },
-    // ]);
-    // const iosFirebaseFile = await inquirer.prompt([
-    //   {
-    //     type: "fuzzypath",
-    //     name: "ios-path",
-    //     itemType: "file",
-    //     rootPath: `/Users/${require("os").userInfo().username}/Downloads/`,
-    //     message: "[iOS 🍎] GoogleService-Info.plist file path: ",
-    //     default: `/Users/${require("os").userInfo().username}/Downloads/`,
-    //     suggestOnly: false,
-    //     depthLimit: 5,
-    //   },
-    // ]);
+    const androidFirebaseFile = await inquirer.prompt([
+      {
+        type: "fuzzypath",
+        name: "android-path",
+        itemType: "file",
+        rootPath: `/Users/${require("os").userInfo().username}/Downloads/`,
+        message: "[Android 🤖] google-services.json file path: ",
+        default: `/Users/${require("os").userInfo().username}/Downloads/`,
+        suggestOnly: false,
+        depthLimit: 5,
+      },
+    ]);
+    const iosFirebaseFile = await inquirer.prompt([
+      {
+        type: "fuzzypath",
+        name: "ios-path",
+        itemType: "file",
+        rootPath: `/Users/${require("os").userInfo().username}/Downloads/`,
+        message: "[iOS 🍎] GoogleService-Info.plist file path: ",
+        default: `/Users/${require("os").userInfo().username}/Downloads/`,
+        suggestOnly: false,
+        depthLimit: 5,
+      },
+    ]);
 
     var pub = `
 # Enhanced by [ignit] 🐐
@@ -231,23 +231,23 @@ flutter:
                 iconPath["iconPath"].endsWith(".png") ||
                 iconPath["iconPath"].endsWith(".jpeg")
               ) {
-                // fs.mkdir(`${args.project}/icons`, function (err) {
-                //   if (err) {
-                //     this.error(new Error(err));
-                //   } else {
-                //     fs.rename(
-                //       `${iconPath["iconPath"]}`,
-                //       `${args.project}/icons/icon.jpg`,
-                //       function (err) {}
-                //     );
-                //     execa("cd", [`${args.project}`]);
-                //     execa("flutter", [
-                //       "pub",
-                //       "run",
-                //       "flutter_launcher_icons:main",
-                //     ]);
-                //   }
-                // });
+                fs.mkdir(`${args.project}/icons`, function (err) {
+                  if (err) {
+                    this.error(new Error(err));
+                  } else {
+                    fs.rename(
+                      `${iconPath["iconPath"]}`,
+                      `${args.project}/icons/icon.jpg`,
+                      function (err) {}
+                    );
+                    execa("cd", [`${args.project}`]);
+                    execa("flutter", [
+                      "pub",
+                      "run",
+                      "flutter_launcher_icons:main",
+                    ]);
+                  }
+                });
               } else {
                 this.error(
                   new Error("🤡 Icons must be .jpg, .jpeg or .png files.")
