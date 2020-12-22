@@ -16,7 +16,7 @@
     "garson": "^0.2.2",
     "inquirer-fuzzy-path": "^2.3.0",
     "listr": "^0.14.3",
-    "node-notifier": "^7.0.1",
+    "node-notifier": "^8.0.1",
     "rxjs": "^6.5.5"
   },
   "devDependencies": {
